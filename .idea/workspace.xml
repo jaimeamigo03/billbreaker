@@ -10,12 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ae75691-26b9-477b-826a-1baad23a38be" name="Changes" comment="HomeScreen completa">
-      <change afterPath="$PROJECT_DIR$/lib/selectioncart.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/selectioncartController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/homescreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/homescreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/homescreenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/homescreenController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/homescreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/homescreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/homescreenController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/homescreenController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/selectioncart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/selectionscreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/selectioncartController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/selectionController.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,12 @@
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jaime\AndroidStudioProjects\billbreaker\billbreaker\lib\Controllers" />
+      <recent name="C:\Users\Jaime\AndroidStudioProjects\billbreaker\billbreaker\lib\Screens" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />

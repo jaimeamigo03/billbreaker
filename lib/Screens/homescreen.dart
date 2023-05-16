@@ -1,5 +1,5 @@
-import 'package:billbreaker/homescreenController.dart';
-import 'package:billbreaker/selectioncart.dart';
+import 'package:billbreaker/Controllers/homescreenController.dart';
+import 'package:billbreaker/Screens/selectionscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
