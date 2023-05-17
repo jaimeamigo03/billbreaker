@@ -3,8 +3,10 @@ import 'package:billbreaker/Controllers/homescreenController.dart';
 import 'package:billbreaker/Controllers/selectionController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:billbreaker/Controllers/mainController.dart';
 
 void main() {
+  Get.put(MainController());
   Get.put(HomeController());
   Get.put(CartController());
 
