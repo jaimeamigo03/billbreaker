@@ -40,7 +40,7 @@ class SelectionCart extends GetView<CartController> {
                     ))),
               ),
               SizedBox(height: 20),
-              Container(
+              /*Container(
                 width: 350,
                 height: 100,
                 decoration: BoxDecoration(
@@ -49,13 +49,21 @@ class SelectionCart extends GetView<CartController> {
                 child: Row(
                   children: [],
                 ),
-              ),
+              ),*/
               SizedBox(height: 20),
               Container(
                 width: 350,
-                height: 450,
+                height: 500,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 4,
+                        blurRadius: 4,
+                        offset: Offset(0, 5),
+                      ),
+                    ],
                     borderRadius: BorderRadius.circular(15)),
                 child: Scrollbar(
                   thumbVisibility: true,
@@ -64,7 +72,7 @@ class SelectionCart extends GetView<CartController> {
                     keepScrollOffset: true,
                   ),
                   child: ListView.builder(
-                    padding: EdgeInsets.only(top: 0),
+                    padding: EdgeInsets.only(top: 20),
                     shrinkWrap: true,
                     itemCount: controller.cart.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -72,40 +80,56 @@ class SelectionCart extends GetView<CartController> {
                         children: [
                           ListTile(
                             title: Container(
-                              height: 50,
+                              height: 75,
                               width: 210,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  border: Border.all(color: Colors.black)),
+                                borderRadius: BorderRadius.circular(15),
+                                border:
+                                    Border.all(color: Colors.grey, width: 2),
+                              ),
                               child: Padding(
-                                padding: const EdgeInsets.all(10.0),
+                                padding: const EdgeInsets.only(
+                                  top: 7,
+                                  left: 10,
+                                ),
                                 child: Row(
                                   children: [
-                                    Text(controller.cart[index].name,
-                                        style: GoogleFonts.poppins(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w300,
-                                        )),
-                                    Text(
-                                      " x${controller.cart[index].quantity}",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w300),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          controller.cart[index].name,
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w300,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                                "\$ ${controller.cart[index].price}",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w300,
+                                                )),
+                                            Text(
+                                              " x${controller.cart[index].quantity}",
+                                              style: GoogleFonts.poppins(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w300,
+                                                  textStyle: const TextStyle(
+                                                    color: Colors.grey,
+                                                  )),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
                               ),
-                            ),
-                            subtitle: Row(
-                              children: [
-                                Text(
-                                  "\$${controller.cart[index].price}",
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                                ),
-                              ],
                             ),
                           ),
                         ],
@@ -147,7 +171,7 @@ class SelectionCart extends GetView<CartController> {
                   ),
                 ),
               ),
-              Spacer(),
+              SizedBox(height: 20),
             ],
           ),
         ),
