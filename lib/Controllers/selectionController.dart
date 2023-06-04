@@ -1,31 +1,36 @@
 import 'package:get/get.dart';
+import 'homescreenController.dart';
 
 class Product {
-  late int id;
   late String name;
   late int quantity;
   late double price;
   late int remaining;
+  RxInt selected = 0.obs;
 
-  Product(this.id, this.name, this.quantity, this.price, this.remaining);
+  Product(this.name, this.quantity, this.price, this.remaining);
 }
 
 class CartController extends GetxController {
+  final HomeController _homeController = Get.find();
+
   late List<Product> cart = [
-    Product(0, "Empanada de carne", 20, 30, 20),
-    Product(1, "Empanada de jamon y queso", 10, 25, 10),
-    Product(2, "Empanada de pollo", 5, 10, 10),
+    Product("Empanada de carne", 20, 30, 20),
+    Product("Empanada de JyQ", 10, 25, 10),
+    Product("Empanada de pollo", 5, 10, 5),
   ];
 
   void addProduct(Product product) {
-    if (product.remaining < product.quantity) {
+    if (product.selected < product.quantity) {
       product.remaining++;
+      product.selected++;
     }
   }
 
   void removeProduct(Product product) {
-    if (product.remaining > 0) {
+    if (product.selected > 0) {
       product.remaining--;
+      product.selected--;
     }
   }
 }
