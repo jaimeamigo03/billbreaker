@@ -6,10 +6,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../Controllers/homescreenController.dart';
+import '../Controllers/homeController.dart';
+import '../Controllers/mainController.dart';
 
 class ConfirmationScreen extends GetView<ConfirmationController> {
-  final HomeController _homeController = Get.find();
+  final MainController _mainController = Get.find();
 
   @override
   Widget build(context) {
@@ -71,7 +72,7 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                       child: ListView.builder(
                         padding: EdgeInsets.only(top: 20, right: 20, left: 20),
                         shrinkWrap: true,
-                        itemCount: _homeController.Carrito.length,
+                        itemCount: _mainController.usuario.cart.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Column(
                             children: [
@@ -96,8 +97,7 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              _homeController
-                                                  .Carrito[index].name,
+                                              "${_mainController.usuario.cart[index].name}",
                                               style: GoogleFonts.poppins(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.w500,
@@ -106,13 +106,13 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                                             ),
                                             Row(children: [
                                               Text(
-                                                  "\$ ${_homeController.Carrito[index].price}",
+                                                  "\$ ${_mainController.usuario.cart[index].price}",
                                                   style: GoogleFonts.poppins(
                                                     fontSize: 18,
                                                     fontWeight: FontWeight.w300,
                                                   )),
                                               Text(
-                                                " x${_homeController.Carrito[index].selected}",
+                                                " x ${_mainController.usuario.cart[index].selected}",
                                                 style: GoogleFonts.poppins(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.w300,
@@ -133,7 +133,73 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                         },
                       ),
                     ),
-                  )
+                  ),
+                  Spacer(),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 350,
+                    height: 50,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 50,
+                          child: Text("Total:",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.w400,
+                              ))),
+                        ),
+                        Spacer(),
+                        Container(
+                          width: 200,
+                          height: 50,
+                          child: Text("\$${_mainController.usuario.total}",
+                              textAlign: TextAlign.right,
+                              style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.w400,
+                              ))),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 70,
+                    width: 350,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 4,
+                              blurRadius: 4,
+                              offset: Offset(0, 5),
+                            ),
+                          ],
+                          borderRadius: BorderRadius.circular(35)),
+                      child: FloatingActionButton.extended(
+                        backgroundColor: Color.fromRGBO(40, 210, 148, 1),
+                        elevation: 0,
+                        onPressed: () {
+                          Get.to(ConfirmationScreen());
+                        },
+                        label: Text(
+                          "Siguiente",
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.w400,
+                          )),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Spacer(),
                 ]))));
   }
 }

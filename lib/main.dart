@@ -1,6 +1,6 @@
 import 'package:billbreaker/Controllers/confirmationController.dart';
 import 'package:billbreaker/Screens/homeScreen.dart';
-import 'package:billbreaker/Controllers/homescreenController.dart';
+import 'package:billbreaker/Controllers/homeController.dart';
 import 'package:billbreaker/Controllers/selectionController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

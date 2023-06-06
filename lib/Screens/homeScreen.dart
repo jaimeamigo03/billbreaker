@@ -1,4 +1,4 @@
-import 'package:billbreaker/Controllers/homescreenController.dart';
+import 'package:billbreaker/Controllers/homeController.dart';
 import 'package:billbreaker/Screens/selectionScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -6,7 +6,10 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
+import '../Controllers/mainController.dart';
+
 class HomeScreen extends GetView<HomeController> {
+  final MainController _mainController = Get.find();
   @override
   Widget build(context) {
     return Scaffold(
@@ -70,7 +73,7 @@ class HomeScreen extends GetView<HomeController> {
                           border: InputBorder.none,
                         ),
                         onSubmitted: (t) {
-                          controller.Apodo.value = t;
+                          _mainController.usuario.nombre = t;
                         },
                       ),
                     ),
@@ -114,7 +117,7 @@ class HomeScreen extends GetView<HomeController> {
                       Colors.black,
                     ],
                     onColorChanged: (c) {
-                      controller.Color.value = c;
+                      _mainController.usuario.color = c;
                     },
                     layoutBuilder: (context, colors, child) {
                       return Padding(

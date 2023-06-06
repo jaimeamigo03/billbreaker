@@ -5,11 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:billbreaker/Controllers/selectionController.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../Controllers/homescreenController.dart';
+import '../Controllers/mainController.dart';
 
 class SelectionCart extends GetView<CartController> {
-  final HomeController _homeController = Get.find();
+  final MainController _mainController = Get.find();
   @override
   Widget build(context) {
     return Scaffold(
@@ -37,7 +36,7 @@ class SelectionCart extends GetView<CartController> {
                 height: 40,
                 width: double.infinity,
                 child: Text(
-                    "${_homeController.Apodo.value} Seleccioná tus productos",
+                    "${_mainController.usuario.nombre} Seleccioná tus productos",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.poppins(
                         textStyle: TextStyle(
@@ -69,7 +68,7 @@ class SelectionCart extends GetView<CartController> {
                   child: ListView.builder(
                     padding: EdgeInsets.only(top: 20, right: 20, left: 20),
                     shrinkWrap: true,
-                    itemCount: controller.cart.length,
+                    itemCount: _mainController.totalProducts.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Column(
                         children: [
@@ -93,7 +92,8 @@ class SelectionCart extends GetView<CartController> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          controller.cart[index].name,
+                                          _mainController
+                                              .totalProducts[index].name,
                                           style: GoogleFonts.poppins(
                                             fontSize: 18,
                                             fontWeight: FontWeight.w500,
@@ -102,13 +102,13 @@ class SelectionCart extends GetView<CartController> {
                                         ),
                                         Row(children: [
                                           Text(
-                                              "\$ ${controller.cart[index].price}",
+                                              "\$ ${_mainController.totalProducts[index].price}",
                                               style: GoogleFonts.poppins(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.w300,
                                               )),
                                           Text(
-                                            " x${controller.cart[index].quantity}",
+                                            " x${_mainController.totalProducts[index].quantity}",
                                             style: GoogleFonts.poppins(
                                                 fontSize: 20,
                                                 fontWeight: FontWeight.w300,
@@ -134,7 +134,8 @@ class SelectionCart extends GetView<CartController> {
                                               color: Colors.black, size: 20),
                                           onPressed: () {
                                             controller.removeProduct(
-                                                controller.cart[index]);
+                                                _mainController
+                                                    .totalProducts[index]);
                                           },
                                         ),
                                         Container(
@@ -150,7 +151,7 @@ class SelectionCart extends GetView<CartController> {
                                             padding: const EdgeInsets.all(1.0),
                                             child: Obx(
                                               () => Text(
-                                                '${controller.cart[index].selected}',
+                                                '${_mainController.totalProducts[index].selected}',
                                                 style: GoogleFonts.poppins(
                                                     fontSize: 18,
                                                     color: Colors.white),
@@ -164,10 +165,9 @@ class SelectionCart extends GetView<CartController> {
                                           child: Icon(Icons.add,
                                               color: Colors.black, size: 20),
                                           onPressed: () {
-                                            print(controller
-                                                .cart[index].selected);
                                             controller.addProduct(
-                                                controller.cart[index]);
+                                                _mainController
+                                                    .totalProducts[index]);
                                           },
                                         ),
                                         Spacer(),
