@@ -10,16 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ae75691-26b9-477b-826a-1baad23a38be" name="Changes" comment="Pantalla confirmar pedido terminada">
-      <change afterPath="$PROJECT_DIR$/lib/Controllers/homeController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controllers/confirmationController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/confirmationController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controllers/homescreenController.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controllers/mainController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/mainController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controllers/selectionController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/selectionController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/confirmationScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/confirmationScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/homeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/homeScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/selectionScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/selectionScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685914898575</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pantalla confirmar pedido terminada">
+      <created>1686085163460</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686085163460</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
