@@ -1,4 +1,6 @@
 import 'package:billbreaker/Controllers/confirmationController.dart';
+import 'package:billbreaker/Controllers/finalController.dart';
+import 'package:billbreaker/Controllers/restaurantController.dart';
 import 'package:billbreaker/Screens/homeScreen.dart';
 import 'package:billbreaker/Controllers/homeController.dart';
 import 'package:billbreaker/Controllers/selectionController.dart';
@@ -7,14 +9,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:billbreaker/Controllers/mainController.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'Controllers/checkoutController.dart';
 import 'firebase_options.dart';
 
-
-Future<void> main() async{
+Future<void> main() async {
   Get.put(MainController());
   Get.put(HomeController());
   Get.put(CartController());
   Get.put(ConfirmationController());
+  Get.put(CheckoutController());
+  Get.put(FinalController());
+  Get.put(RestaurantController());
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

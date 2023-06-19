@@ -10,7 +10,6 @@ import '../Controllers/mainController.dart';
 class SelectionCart extends GetView<CartController> {
   final MainController _mainController = Get.find();
 
-
   @override
   Widget build(context) {
     return Scaffold(
@@ -21,7 +20,7 @@ class SelectionCart extends GetView<CartController> {
             bottom: 40,
           ),
           child: Padding(
-            padding: const EdgeInsets.only(left:10.0, right: 20),
+            padding: const EdgeInsets.only(left: 10.0, right: 20),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -82,8 +81,8 @@ class SelectionCart extends GetView<CartController> {
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
-                                    border:
-                                        Border.all(color: Colors.grey, width: 2),
+                                    border: Border.all(
+                                        color: Colors.grey, width: 2),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
@@ -91,7 +90,8 @@ class SelectionCart extends GetView<CartController> {
                                       Container(
                                         width: 200,
                                         height: 80,
-                                        padding: EdgeInsets.only(top: 10, left: 10),
+                                        padding:
+                                            EdgeInsets.only(top: 10, left: 10),
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -136,7 +136,8 @@ class SelectionCart extends GetView<CartController> {
                                               minSize: double.minPositive,
                                               padding: EdgeInsets.zero,
                                               child: Icon(Icons.remove,
-                                                  color: Colors.black, size: 20),
+                                                  color: Colors.black,
+                                                  size: 20),
                                               onPressed: () {
                                                 controller.removeProduct(
                                                     _mainController
@@ -153,7 +154,8 @@ class SelectionCart extends GetView<CartController> {
                                                 color: Colors.black,
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsets.all(1.0),
+                                                padding:
+                                                    const EdgeInsets.all(1.0),
                                                 child: Obx(
                                                   () => Text(
                                                     '${_mainController.totalProducts[index].selected}',
@@ -168,7 +170,8 @@ class SelectionCart extends GetView<CartController> {
                                               minSize: double.minPositive,
                                               padding: EdgeInsets.zero,
                                               child: Icon(Icons.add,
-                                                  color: Colors.black, size: 20),
+                                                  color: Colors.black,
+                                                  size: 20),
                                               onPressed: () {
                                                 controller.addProduct(
                                                     _mainController
@@ -189,7 +192,9 @@ class SelectionCart extends GetView<CartController> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   SizedBox(
                     height: 70,
                     width: 350,
@@ -209,7 +214,7 @@ class SelectionCart extends GetView<CartController> {
                         backgroundColor: Color.fromRGBO(40, 210, 148, 1),
                         elevation: 0,
                         onPressed: () {
-                          _mainController.createUser(_mainController.usuario);
+                          Get.to(ConfirmationScreen());
                         },
                         label: Text(
                           "Siguiente",
@@ -222,7 +227,9 @@ class SelectionCart extends GetView<CartController> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 40,),
+                  SizedBox(
+                    height: 40,
+                  ),
                 ],
               ),
             ),

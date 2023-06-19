@@ -7,6 +7,7 @@ import 'package:billbreaker/firebase_options.dart';
 import 'package:billbreaker/main.dart';
 
 import '../Screens/confirmationScreen.dart';
+import '../Screens/finalScreen.dart';
 
 class Product {
   late String name;
@@ -16,7 +17,7 @@ class Product {
 
   Product(this.name, this.quantity, this.price);
 
-  toJson(){
+  toJson() {
     return {
       "nombre": name,
       "seleccionados": selected.toInt(),
@@ -33,7 +34,7 @@ class User {
 
   User(this.nombre, this.color);
 
-  toJson(){
+  toJson() {
     return {
       "nombre": nombre,
       "cart": cart,
@@ -49,15 +50,16 @@ final usuarios = db.collection("usuarios");
 class MainController extends GetxController {
   User usuario = User("", Colors.black);
   List<Product> totalProducts = [
-    Product("Empanada JyQ",25,10),
-    Product("Empanada carne",30,20),
-    Product("Empanada humita",3,15),
-    Product("Empanada pollo",5,10)];
+    Product("Empanada JyQ", 25, 10),
+    Product("Empanada carne", 30, 20),
+    Product("Empanada humita", 3, 15),
+    Product("Empanada pollo", 5, 10)
+  ];
 
-  createUser(User usuario) async{
-    final List<Map<String,dynamic>> newCart = [];
+  createUser(User usuario) async {
+    final List<Map<String, dynamic>> newCart = [];
 
-    for(int i = 0; i < usuario.cart.length;i++){
+    for (int i = 0; i < usuario.cart.length; i++) {
       newCart.add(usuario.cart[i].toJson());
     }
     final usuarioFinal = <String, dynamic>{
@@ -66,6 +68,18 @@ class MainController extends GetxController {
       "total": usuario.total.toInt(),
     };
     await db.collection("usuarios").add(usuarioFinal);
-    Get.to(ConfirmationScreen());
+    Get.to(FinalScreen());
+  }
+
+  Future<void> restaurantUpdater() async {
+    for (int i = 0; i < totalProducts.length; i++) {
+      final docRef = FirebaseFirestore.instance
+          .collection('carrito')
+          .doc(totalProducts[i].name);
+      final docSnapshot = await docRef.get();
+      if (docSnapshot.exists) {
+        totalProducts[i].selected.value = docSnapshot.data()!['selected'];
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 import 'package:billbreaker/Controllers/confirmationController.dart';
 import 'package:billbreaker/Controllers/selectionController.dart';
+import 'package:billbreaker/Screens/checkoutScreen.dart';
 import 'package:billbreaker/Screens/selectionScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -22,8 +23,7 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                   bottom: 40,
                 ),
                 child: SingleChildScrollView(
-                  child: Column(
-                      children: [
+                  child: Column(children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0),
                       child: Row(children: [
@@ -72,7 +72,8 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                           keepScrollOffset: true,
                         ),
                         child: ListView.builder(
-                          padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+                          padding:
+                              EdgeInsets.only(top: 20, right: 20, left: 20),
                           shrinkWrap: true,
                           itemCount: _mainController.usuario.cart.length,
                           itemBuilder: (BuildContext context, int index) {
@@ -87,13 +88,14 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                                           color: Colors.grey, width: 2),
                                     ),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
                                         Container(
                                           width: 200,
                                           height: 80,
-                                          padding:
-                                              EdgeInsets.only(top: 10, left: 10),
+                                          padding: EdgeInsets.only(
+                                              top: 10, left: 10),
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -111,14 +113,17 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                                                     "\$ ${_mainController.usuario.cart[index].price}",
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 18,
-                                                      fontWeight: FontWeight.w300,
+                                                      fontWeight:
+                                                          FontWeight.w300,
                                                     )),
                                                 Text(
                                                   " x ${_mainController.usuario.cart[index].selected}",
                                                   style: GoogleFonts.poppins(
                                                       fontSize: 20,
-                                                      fontWeight: FontWeight.w300,
-                                                      textStyle: const TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                      textStyle:
+                                                          const TextStyle(
                                                         color: Colors.grey,
                                                       )),
                                                 )
@@ -126,7 +131,9 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                                             ],
                                           ),
                                         ),
-                                        SizedBox(height: 40,),
+                                        SizedBox(
+                                          height: 40,
+                                        ),
                                       ],
                                     )),
                                 SizedBox(width: 350, height: 10)
@@ -136,7 +143,9 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 40,),
+                    SizedBox(
+                      height: 40,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 350,
@@ -188,7 +197,7 @@ class ConfirmationScreen extends GetView<ConfirmationController> {
                           backgroundColor: Color.fromRGBO(40, 210, 148, 1),
                           elevation: 0,
                           onPressed: () {
-                            Get.to(ConfirmationScreen());
+                            Get.to(checkoutScreen());
                           },
                           label: Text(
                             "Siguiente",

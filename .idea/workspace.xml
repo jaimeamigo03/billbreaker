@@ -10,7 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ae75691-26b9-477b-826a-1baad23a38be" name="Changes" comment="Pantalla confirmar pedido terminada">
+      <change afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Controllers/checkoutController.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Controllers/finalController.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Controllers/restaurantController.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Screens/checkoutScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Screens/finalScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Screens/restaurantScreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Controllers/mainController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/mainController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Controllers/selectionController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/selectionController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/confirmationScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/confirmationScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/homeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/homeScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Screens/selectionScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/selectionScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +63,16 @@
     &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jaime/AndroidStudioProjects/billbreaker/billbreaker&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jaime/AndroidStudioProjects/billbreaker/billbreaker/android/app&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jaime\AndroidStudioProjects\billbreaker\billbreaker\android\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jaime\AndroidStudioProjects\billbreaker\billbreaker\lib\Controllers" />
       <recent name="C:\Users\Jaime\AndroidStudioProjects\billbreaker\billbreaker\lib\Screens" />

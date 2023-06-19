@@ -1,9 +1,6 @@
-import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'mainController.dart';
-
 
 class CartController extends GetxController {
   final MainController _mainController = Get.find();
@@ -28,31 +25,40 @@ class CartController extends GetxController {
       product.selected++;
       cartUpdater(product);
 
-      final docRef = FirebaseFirestore.instance.collection('carrito').doc(product.name);
+      final docRef =
+          FirebaseFirestore.instance.collection('carrito').doc(product.name);
       final docSnapshot = await docRef.get();
 
       if (docSnapshot.exists) {
-        final seleccionados = docSnapshot.data()!['selected'] + product.selected.toInt();
-      db.collection('carrito').doc(product.name).update({'selected': seleccionados.toInt(),});
-      _mainController.usuario.total =
-          _mainController.usuario.total + product.price.toInt();
+        final seleccionados =
+            docSnapshot.data()!['selected'] + product.selected.toInt();
+        db.collection('carrito').doc(product.name).update({
+          'selected': seleccionados.toInt(),
+        });
+        _mainController.usuario.total =
+            _mainController.usuario.total + product.price.toInt();
+      }
     }
-  }}
+  }
 
   Future<void> removeProduct(Product product) async {
     if (product.selected > 0) {
       product.selected--;
       cartUpdater(product);
 
-      final docRef = FirebaseFirestore.instance.collection('carrito').doc(product.name);
+      final docRef =
+          FirebaseFirestore.instance.collection('carrito').doc(product.name);
       final docSnapshot = await docRef.get();
 
       if (docSnapshot.exists) {
-        final seleccionados = docSnapshot.data()!['selected'] - product.selected.toInt();
-        db.collection('carrito').doc(product.name).update({'selected': seleccionados.toInt(),});
+        final seleccionados =
+            docSnapshot.data()!['selected'] - product.selected.toInt();
+        db.collection('carrito').doc(product.name).update({
+          'selected': seleccionados.toInt(),
+        });
         _mainController.usuario.total =
             _mainController.usuario.total - product.price.toInt();
       }
-    }}
-
+    }
+  }
 }

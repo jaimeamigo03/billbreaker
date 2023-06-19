@@ -1,4 +1,5 @@
 import 'package:billbreaker/Controllers/homeController.dart';
+import 'package:billbreaker/Screens/restaurantScreen.dart';
 import 'package:billbreaker/Screens/selectionScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -11,29 +12,36 @@ class HomeScreen extends GetView<HomeController> {
   final MainController _mainController = Get.find();
   @override
   Widget build(context) {
-
     return Scaffold(
         resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(40, 210, 148, 1),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.house_outlined),
+              onPressed: () {
+                Get.to(RestaurantScreen());
+              },
+            ),
+          ],
+        ),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 75.0),
-                    child: Container(
-                      padding: EdgeInsets.only(top: 30),
-                      alignment: Alignment.center,
-                      child: Text(
-                        "billbreaker",
-                        style: GoogleFonts.lora(
-                            textStyle: TextStyle(
-                          color: Colors.black,
-                          fontSize: 64,
-                          fontWeight: FontWeight.w400,
-                        )),
-                      ),
+                  Container(
+                    padding: EdgeInsets.only(top: 0),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "billbreaker",
+                      style: GoogleFonts.lora(
+                          textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 64,
+                        fontWeight: FontWeight.w400,
+                      )),
                     ),
                   ),
                   SizedBox(
@@ -64,7 +72,8 @@ class HomeScreen extends GetView<HomeController> {
                             ),
                           ),
                           decoration: const InputDecoration(
-                            floatingLabelAlignment: FloatingLabelAlignment.start,
+                            floatingLabelAlignment:
+                                FloatingLabelAlignment.start,
                             hintText: "Apodo",
                             hintStyle: TextStyle(
                               color: Colors.grey,
@@ -133,7 +142,9 @@ class HomeScreen extends GetView<HomeController> {
                               childAspectRatio: 1,
                               mainAxisExtent: 80,
                             ),
-                            children: [for (Color color in colors) child(color)],
+                            children: [
+                              for (Color color in colors) child(color)
+                            ],
                           ),
                         );
                       },
