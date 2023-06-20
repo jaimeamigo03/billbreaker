@@ -9,27 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae75691-26b9-477b-826a-1baad23a38be" name="Changes" comment="Pantalla confirmar pedido terminada">
-      <change afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Controllers/checkoutController.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Controllers/finalController.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Controllers/restaurantController.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/checkoutScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/finalScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Screens/restaurantScreen.dart" afterDir="false" />
+    <list default="true" id="6ae75691-26b9-477b-826a-1baad23a38be" name="Changes" comment="App terminada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controllers/mainController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/mainController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controllers/selectionController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/selectionController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/confirmationScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/confirmationScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/homeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/homeScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Screens/selectionScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/selectionScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686085163460</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="App terminada">
+      <created>1687202321759</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687202321759</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +150,7 @@
     <MESSAGE value="Ajuste overflow con teclado y text.&#10;Cambio diseño selection cart.&#10;Reacomodo de los productos" />
     <MESSAGE value="Comienzo desarrollo pantalla confirmar pedido&#10;&#10;Hay que solucionar como cargar el carrito del usuario&#10;&#10;Rechequear los controllers y solucionar clases (User/Carrito)" />
     <MESSAGE value="Pantalla confirmar pedido terminada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pantalla confirmar pedido terminada" />
+    <MESSAGE value="App terminada" />
+    <option name="LAST_COMMIT_MESSAGE" value="App terminada" />
   </component>
 </project>
