@@ -31,7 +31,7 @@ class CartController extends GetxController {
 
       if (docSnapshot.exists) {
         final seleccionados =
-            docSnapshot.data()!['selected'] + product.selected.toInt();
+            docSnapshot.data()!['selected'] + 1;
         db.collection('carrito').doc(product.name).update({
           'selected': seleccionados.toInt(),
         });
@@ -52,7 +52,7 @@ class CartController extends GetxController {
 
       if (docSnapshot.exists) {
         final seleccionados =
-            docSnapshot.data()!['selected'] - product.selected.toInt();
+            docSnapshot.data()!['selected'] - 1;
         db.collection('carrito').doc(product.name).update({
           'selected': seleccionados.toInt(),
         });
